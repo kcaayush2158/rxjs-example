@@ -10,8 +10,6 @@ import { interval, tap } from 'rxjs';
 })
 export class SeventeenBufferToggleOpratorComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
     let opening = interval(400).pipe(tap(() => console.log('buffer opened')));
     let closing = () => interval(300).pipe(tap(() => console.log(' buffer closed')));
